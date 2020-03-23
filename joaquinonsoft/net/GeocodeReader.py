@@ -11,7 +11,7 @@ class GeocodeReader(HTTPRequest):
     Get Latitude & Longitude from a given address
     SEE: https://stackoverflow.com/questions/25888396/how-to-get-latitude-longitude-with-python
     """
-    URL_BASE = "https://maps.googleapis.com/maps/api/geocode/json?"
+    URL_BASE = "https://maps.googleapis.com/maps/api/geocode/json"
 
     PARAM_ADDRESS = "address"
     PARAM_KEY = "key"

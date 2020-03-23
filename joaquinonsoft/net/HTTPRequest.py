@@ -24,8 +24,10 @@ class HTTPRequest:
             resource = urllib.request.urlopen(self.url, data=body_data)
 
         if self.method == self.METHOD_GET:
-            str_params = urllib.parse.urlencode(self.params)
-            resource = urllib.request.urlopen(self.url + str_params)
+            str_params = ""
+            if self.params is not None:
+                str_params = urllib.parse.urlencode(self.params)
+            resource = urllib.request.urlopen(self.url + "?" + str_params)
 
         response = resource.read()
 
