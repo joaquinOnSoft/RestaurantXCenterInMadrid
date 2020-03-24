@@ -1,4 +1,3 @@
-import json
 import re
 
 from joaquinonsoft.net.HTTPRequest import HTTPRequest
@@ -21,12 +20,6 @@ class RodillasLocatorURLReader(HTTPRequest):
         address = re.findall(r"<p class=\"search-restaurant-address\">(.*)<", response)
         phone = re.findall(r"<p class=\"search-restaurant-phone\">(.*)<", response)
 
-        print("lats: ", len(lat))
-        print("lngs: ", len(lng))
-        print("h3: ", len(name))
-        print("address: ", len(address))
-        print("phone: ", len(phone))
-
         for i in range(len(lat)):
             location = {"latitude": lat[i],
                         "longitude": lng[i],
@@ -36,6 +29,6 @@ class RodillasLocatorURLReader(HTTPRequest):
 
             locations.append(location)
 
-            print(lat[i], lng[i], name[i], address[i], phone[i])
+            # print(lat[i], lng[i], name[i], address[i], phone[i])
 
-        return response
+        return locations
