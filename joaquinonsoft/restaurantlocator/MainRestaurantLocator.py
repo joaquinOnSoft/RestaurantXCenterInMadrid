@@ -45,7 +45,7 @@ def main(argv):
 
         vips_locator = VIPsLocatorURLReader()
         vips = vips_locator.read()
-        write_csv(output_folder + "\\vips.csv", rodillas)
+        write_csv(output_folder + "\\vips.csv", vips)
     else:
         print_help()
 

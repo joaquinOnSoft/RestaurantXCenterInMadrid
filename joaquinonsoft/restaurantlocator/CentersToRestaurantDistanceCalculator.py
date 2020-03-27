@@ -56,6 +56,6 @@ class CentersToRestaurantDistanceCalculator:
                     "restaurant address": nearest_restaurant["address"],
                     "restaurant latitude": nearest_restaurant["latitude"],
                     "restaurant longitude": nearest_restaurant["longitude"],
-                    "distance": min_distance})
+                    "distance (km)": min_distance})
 
         return centers_extended_info
